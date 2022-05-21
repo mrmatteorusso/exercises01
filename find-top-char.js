@@ -1,6 +1,8 @@
 function mostOccoredChar(string) {
 
-    const stringArray = string.split('');
+    const stringArray = string.split('').filter(a=> a.trim());
+
+    console.log(stringArray) //how to console.log this when the test is on?
 
     const uniqueStringValue = new Set(stringArray)
     console.log(uniqueStringValue)
