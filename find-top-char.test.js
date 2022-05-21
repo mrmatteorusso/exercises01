@@ -8,4 +8,6 @@ test('count unique value of a string with spaces', () => {
   expect(mostOccoredChar("werr  rrr r")).toStrictEqual({ w: 1, e: 1, r: 6 });
 });
 
-
+test('count unique value of a string, counting only letters and numebers', () => {
+  expect(mostOccoredChar("we, rr;  r%rr r!!!")).toStrictEqual({ w: 1, e: 1, r: 6 });
+});

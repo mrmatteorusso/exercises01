@@ -1,6 +1,6 @@
 function mostOccoredChar(string) {
 
-    const stringArray = string.split('').filter(a=> a.trim());
+    const stringArray = string.replace(/[^a-zA-Z0-9]/g, '').split('').filter(a=> a.trim()); // -
 
     console.log(stringArray) //how to console.log this when the test is on?
 
@@ -15,7 +15,7 @@ function mostOccoredChar(string) {
         for (let j = i; j < stringArray.length; j++) {
 
             if (uniqueStringValueArray[i] === stringArray[j]) {
-                console.log(uniqueStringValueArray[i] + " is found at position " + (j + 1) + " of " + string)
+                //console.log(uniqueStringValueArray[i] + " is found at position " + (j + 1) + " of " + string)
 
                 // counter.push([uniqueStringValueArray[i], j]) 
                 let letter = uniqueStringValueArray[i]
