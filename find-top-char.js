@@ -7,7 +7,6 @@ function mostOccoredChar(string) {
     const uniqueStringValueArray = [...uniqueStringValue]
     console.log(uniqueStringValueArray)
     counter = {}
-    counters = 0
 
     for (let i = 0; i < uniqueStringValueArray.length; i++) {
 
@@ -16,14 +15,19 @@ function mostOccoredChar(string) {
             if (uniqueStringValueArray[i] === stringArray[j]) {
                 console.log(uniqueStringValueArray[i] + " is found at position " + (j + 1) + " of " + string)
 
-                // counter.push([uniqueStringValueArray[i], j])   
+                // counter.push([uniqueStringValueArray[i], j]) 
+                let letter = uniqueStringValueArray[i]
+                if (!counter[letter]) {
+                    counter[letter] = 0
+                }
+                counter[letter] += 1
 
                 continue
             }
         }
 
     }
-    return uniqueStringValueArray
+    return counter
 }
 
 module.exports = mostOccoredChar
