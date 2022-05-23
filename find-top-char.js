@@ -29,7 +29,10 @@ function mostOccoredChar(string) {
         }
 
     }
-    return counter
+    let entries =Object.entries(counter)
+    let orderEntries = entries.sort((a,b) => b[1]-a[1])
+    console.log (`the most frequent letter is "${orderEntries[0][0]}" which occurs ${orderEntries[0][1]} time(s)`)
+    return orderEntries[0][0]
 }
 
 module.exports = mostOccoredChar
